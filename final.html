@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Contract 💘</title>
+    <link rel="icon" type="image/png" href="image.png">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="gif-loader">
+            <div class="heart-loader">🦋</div>
+            <p>Asking the universe for permission...</p>
+        </div>
+        <div class="tenor-gif-embed" data-postid="9715780225379444546" data-share-method="host"
+            data-aspect-ratio="1.77778" data-width="100%"><a
+                href="https://tenor.com/view/impatient-waiting-im-waiting-still-waiting-waiting-for-you-gif-9715780225379444546">
+                Impatient Waiting GIF</a>from <a href="https://tenor.com/search/impatient-gifs">Impatient GIFs</a></div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+        <h1>💘 Agreement For Life..</h1>
+        <p>“Legally binding… in my heart 😌”</p>
+
+        <div class="checkboxes">
+            <div class="checklist">
+                <label class="check-item">
+                    <input type="checkbox" class="item">
+                    <span class="label-text">Keep smiling at me, Always 😊</span>
+                    <span class="heart-pop">💗</span>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox" class="item">
+                    <span class="label-text">Trust me with your small moments ☕</span>
+                    <span class="heart-pop">💗</span>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox" class="item">
+                    <span class="label-text">Talk to me even when you feel quiet 🥹</span>
+                    <span class="heart-pop">💗</span>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox" class="item">
+                    <span class="label-text">One surprise hug, EVERYDAY 🤗</span>
+                    <span class="heart-pop">💗</span>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox" class="item">
+                    <span class="label-text">Hold my hand, Forever 🤗</span>
+                    <span class="heart-pop">💗</span>
+                </label>
+            </div>
+
+        </div>
+
+
+        <div class="btn" style="margin-top:16px;">
+            <a href="thankyou.html" id="accept-btn">I ACCEPT 💕</a>
+        </div>
+
+        <p id="warning" style="display:none; color:#c1121f; font-weight:600;">
+            Nice try… you missed one 😏
+        </p>
+
+    </div>
+
+    <div class="hearts">
+        <span>❤️</span><span>💗</span><span>💕</span><span>💖</span><span>💘</span>
+        <span>❤️</span><span>💗</span><span>💕</span><span>💖</span><span>💘</span>
+    </div>
+
+    <script> const checkboxes = document.querySelectorAll(".item"); 
+        const acceptBtn = document.getElementById("accept-btn"); 
+        const warning = document.getElementById("warning"); 
+        acceptBtn.addEventListener("click", function (e) { 
+            let allChecked = Array.from(checkboxes).every(cb => cb.checked); 
+            if (!allChecked) { 
+                e.preventDefault(); 
+                warning.style.display = "block"; 
+                } 
+                }); 
+            </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</body>
+
+</html>

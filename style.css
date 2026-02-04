@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffd6e0, #ffb3c6);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 18px;
+    max-width: 420px;
+    padding: 28px 24px;
+    margin: 20px;
+    gap: 16px;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 22px;
+    backdrop-filter: blur(5px);
+    box-shadow: 
+        0px 10px 25px rgba(0,0,0,0.12),
+        0px 0px 20px rgba(255, 77, 109, 0.12);
+}
+
+.container .tenor-gif-embed{
+    max-width: 240px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.12);
+    animation: slideIn 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container .btn{
+    display: flex;
+    gap: 20px;
+    margin-top: 6px;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #ff4d6d, #ff758f);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0px 5px 15px rgba(255, 77, 109, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn a:hover{
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 18px rgba(255, 77, 109, 0.5);
+}
+
+#move-random {
+  transition: top 0.5s ease, left 0.5s ease;
+  display: flex;
+    gap: 20px;
+    margin-top: 6px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #ff4d6d, #ff758f);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0px 5px 15px rgba(255, 77, 109, 0.35);
+    
+}
+
+#move-random a{
+   
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#move-random a:hover{
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 18px rgba(255, 77, 109, 0.5);
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #c1121f;
+    letter-spacing: 0.2px;
+    margin-top: 6px;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    line-height: 1.55;
+    max-width: 360px;
+}
+
+h1, h4, p, .btn, .checkboxes, #nameInput{
+    animation: fadeUp 0.9s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+
+#move-random{
+    animation: fadeUp 0.9s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hearts span {
+  position: absolute;
+  bottom: -10%;
+  font-size: 25px;
+  animation: float 6s linear infinite;
+  opacity: 0.7;
+}
+
+/* Random positions & speeds */
+.hearts span:nth-child(1){ left: 10%; animation-duration: 5s; }
+.hearts span:nth-child(2){ left: 25%; animation-duration: 7s; }
+.hearts span:nth-child(3){ left: 40%; animation-duration: 6s; }
+.hearts span:nth-child(4){ left: 55%; animation-duration: 8s; }
+.hearts span:nth-child(5){ left: 70%; animation-duration: 5.5s; }
+.hearts span:nth-child(6){ left: 85%; animation-duration: 7.5s; }
+.hearts span:nth-child(7){ left: 15%; animation-duration: 6.8s; }
+.hearts span:nth-child(8){ left: 35%; animation-duration: 5.2s; }
+.hearts span:nth-child(9){ left: 60%; animation-duration: 7.1s; }
+.hearts span:nth-child(10){ left: 80%; animation-duration: 6.3s; }
+
+@keyframes float {
+  0% { transform: translateY(0) scale(0.8); opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+}
+
+/* -------- Cute GIF Loader -------- */
+#gif-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.heart-loader {
+  font-size: 40px;
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Hide GIF initially */
+.tenor-gif-embed {
+  display: none;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ----- Smooth transitions ----- */
+
+/* make loader fade instead of disappear */
+#gif-loader {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* initial state of gif: hidden + slightly down */
+.tenor-gif-embed {
+  display: none;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* class we will add in JS */
+.tenor-gif-embed.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ----- Cute checkboxes ----- */
+.checklist {
+  text-align: left;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+/* custom checkbox look */
+.check-item input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff4d6d;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* checked state */
+.check-item input[type="checkbox"]:checked {
+  background: #ff4d6d;
+}
+
+/* cute tick */
+.check-item input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 4px;
+  top: -1px;
+}
+
+/* heart popup */
+.heart-pop {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.3s ease;
+}
+
+/* when checked, show heart */
+.check-item input[type="checkbox"]:checked ~ .heart-pop {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* text glow when checked */
+.check-item input[type="checkbox"]:checked ~ .label-text {
+  color: #c1121f;
+  font-weight: 600;
+}
+
+ .petal {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.9;
+            animation: swirl-fall linear forwards;
+        }
+
+        @keyframes swirl-fall {
+            0% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+                opacity: 0.9;
+            }
+
+            50% {
+                transform: translate(40px, 200px) rotate(180deg) scale(1.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-40px, 600px) rotate(360deg) scale(0.8);
+                opacity: 0;
+            }
+        }

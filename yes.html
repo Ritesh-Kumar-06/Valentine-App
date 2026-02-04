@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's a YES 🌹</title>
+    <link rel="icon" type="image/png" href="image.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="gif-loader">
+            <div class="heart-loader">😍</div>
+            <p>She said YESSS...</p>
+        </div>
+        <div class="tenor-gif-embed" data-postid="10644724710938744071" data-share-method="host"
+            data-aspect-ratio="0.562249" data-width="100%"><a
+                href="https://tenor.com/view/puuung-kiss-puuung-gif-10644724710938744071">Puuung Kiss GIF</a>
+            from <a href="https://tenor.com/search/puuung+kiss-gifs">
+                Puuung Kiss GIFs</a></div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js">
+        </script>
+
+        <h1>HeeHaHaHaHaHa! I knew it, You Love Me! 🥰</h1>
+        <h4>Now, let's make you sign a contract. 😎</h4>
+        <div class="btn">
+            <a href="final.html">Checkout the Contract 👀</a>
+            <!-- <a href="no1.html">No</a> -->
+        </div>
+    </div>
+    <div class="hearts">
+        <span>❤️</span><span>💗</span><span>💕</span><span>💖</span><span>💘</span>
+        <span>❤️</span><span>💗</span><span>💕</span><span>💖</span><span>💘</span>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const colors = ["#ff4d6d", "#ffb3c6", "#ffd166", "#ffc8dd"];
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+
+            for (let i = 0; i < 100; i++) {
+                let petal = document.createElement("div");
+                petal.classList.add("petal");
+
+                let angle = Math.random() * Math.PI * 2;
+                let radius = Math.random() * 150;
+
+                petal.style.left = (centerX + Math.cos(angle) * radius) + "px";
+                petal.style.top = (centerY + Math.sin(angle) * radius) + "px";
+                petal.style.background = colors[Math.floor(Math.random() * colors.length)];
+                petal.style.width = petal.style.height = (Math.random() * 10 + 6) + "px";
+                petal.style.animationDuration = (Math.random() * 3 + 4) + "s";
+
+                document.body.appendChild(petal);
+
+                setTimeout(() => petal.remove(), 6000);
+            }
+        });
+    </script>
+
+        <script src="script.js"></script>
+
+
+</body>
+
+</html>
