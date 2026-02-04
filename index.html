@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask Her Out 🌹</title>
-    <link rel="icon" type="image/png" href="image.png">
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap"
-        rel="stylesheet">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome 💕</title>
+<link rel="icon" type="image/png" href="image.png">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="container">
-        <div id="gif-loader">
-            <div class="heart-loader">🦋</div>
-            <p>Asking the universe for permission...</p>
-        </div>
+<div class="container">
 
-        <div class="tenor-gif-embed" data-postid="9431944348187876211" data-share-method="host"
-            data-aspect-ratio="0.975904" data-width="100%">
-            <a href="https://tenor.com/view/cat-cute-kitten-kitty-pussy-cat-gif-9431944348187876211">
-                Cat Cute GIF</a>from <a href="https://tenor.com/search/cat-gifs">
-                Cat GIFs</a>
-        </div>
-        <script type="text/javascript" async src="https://tenor.com/embed.js">
-        </script>
+  <div id="gif-loader">
+    <div class="heart-loader">🦋</div>
+    <p>Waiting for your name...</p>
+  </div>
 
-        <h1>Hey <span id="name"></span>, will you go out with me? 👀</h1>
-        <p>“My heart picked you before my mind ever could, say YES and make this moment ours.”</p>
-        <div class="btn">
-            <a href="yes.html">Yes</a>
-            <a href="no1.html">No</a>
-        </div>
+  <div class="tenor-gif-embed" data-postid="5892522805340728967" data-share-method="host" 
+  data-aspect-ratio="0.646789" data-width="100%"><a href="https://tenor.com/view/smiling-cat-happy-cat-smile-gif-5892522805340728967">
+    Smiling Cat Happy Cat GIF</a>from <a href="https://tenor.com/search/smiling+cat-gifs">Smiling Cat GIFs</a></div> 
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
-    </div>
-    <div class="hearts">
-        <span>❤️</span><span>💗</span><span>💕</span><span>💖</span><span>💘</span>
-        <span>❤️</span><span>💗</span><span>💕</span><span>💖</span><span>💘</span>
-    </div>
-    <script>
-        const name = localStorage.getItem("crushName") || "Love";
-        document.getElementById("name").innerText = name;
-    </script>
-    <script src="script.js"></script>
+  <h1>Hey pretty girl... what’s your name? 💘</h1>
 
+  <input id="nameInput"
+         placeholder="Type your name here..."
+         style="
+           padding: 10px;
+           width: 80%;
+           border-radius: 12px;
+           border: 2px solid #ff4d6d;
+           text-align: center;
+           font-size: 16px;
+         " />
 
+  <div class="btn">
+    <a href="#" id="startBtn">Start 💕</a>
+  </div>
+
+</div>
+
+<div class="hearts">
+  <span>❤️</span><span>💗</span><span>💕</span><span>💖</span><span>💘</span>
+  <span>❤️</span><span>💗</span><span>💕</span><span>💖</span><span>💘</span>
+</div>
+
+<script>
+document.getElementById("startBtn").addEventListener("click", function(e){
+  const name = document.getElementById("nameInput").value.trim();
+
+  if(!name){
+    alert("Nice try… type your name first 😏");
+    return;
+  }
+
+  localStorage.setItem("crushName", name);
+  window.location.href = "firstPage.html";
+});
+</script>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
