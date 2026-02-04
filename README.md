@@ -32,6 +32,7 @@ This is not just another static webpage — it’s a **mini interactive love jou
 ### 🌟 User Experience
 
 * Personalized greeting using the user’s name
+* Mobile-friendly. (Use it on your smartphones)
 * Smooth transitions and cute animations
 * Floating hearts background across all pages
 * Fun “No” button that keeps running away 😏
